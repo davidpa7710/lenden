@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: .5rem;
+    text-align: center;
+    color: aliceblue;
+    list-style: none;
+    background-color: #413543;
+    font-size: 18px;
+}
+.navigation a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.navigation a:hover{
+    color: #57C5B6;
+}
+
+.logo{
+    width: 120px;
+    height: 70px;
+}
