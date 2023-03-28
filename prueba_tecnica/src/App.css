@@ -15,7 +15,10 @@ body {
   margin-top: 4rem;
   text-align: center;
   align-items: center;
+  margin-left: 25%;
   padding: 2rem;
+  width: 700px;
+  font-size: 18px;
 }
 
 .hero-logo {

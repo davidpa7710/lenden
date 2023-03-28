@@ -1,0 +1,42 @@
+.footer{
+    margin-top: 3rem;
+    background-color: #413543;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 250px;
+    padding: 50px 150px;
+    font-weight: 400;
+    color: aliceblue;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.footer li{
+    margin-top: 1.5vh;
+    margin-bottom: 2vh;
+    list-style: none;
+    touch-action: manipulation;
+}
+.footer a:hover, li:hover{
+    color: #3C84AB;
+    text-decoration: underline; 
+    cursor: pointer;
+    transition-duration: .2s;
+}
+.copyright{
+    width: 300px;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 380px;
+    font-weight: 200;
+}
+p{
+    font-weight: 200;
+}
+.brands{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 40px;
+}

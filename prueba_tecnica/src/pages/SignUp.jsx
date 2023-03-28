@@ -9,7 +9,7 @@ const SignUp = () => {
         <>
             <div className="container_sign">
                 <img src="./src/assets/My project-1 (1).png" alt="logo_img" srcset="" className="logo2" />
-                <p>Unete a la comunidad Lenden y conecta con mas personas, <br />Busca personas con tus mismos Hobbies para interactuar y concectar</p>
+                <p>Let's Lenden together!</p>
             </div>
             <form onSubmit={handleSubmit} className="form">
                 <h2>Registrate</h2>
@@ -21,7 +21,7 @@ const SignUp = () => {
                 <input type="text" className="input" placeholder="hola@example.com" />
                 <p className="text-form">Contraseña</p>
                 <input type="password" className="input" placeholder="Contraseña" name="password1" />
-                <p className="text-form"> Repite tu Contraseña</p>
+                <p className="text-form"> Confirma tu Contraseña</p>
                 <input type="password" className="input" placeholder="Contraseña" name="password2" />
                 <button className="btn-form">Crea tu Cuenta</button>
             </form>
