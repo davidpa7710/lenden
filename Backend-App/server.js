@@ -6,8 +6,15 @@ const usersRoutes = require('./routes/user.route.js');
 
 const app = express()
 
+const allowedOrigins = ['http://localhost:5173'];
 var corsOptions = {
-    origin: "http://localhost:5050/"
+    origin: function (origin, callback) {
+        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
 }
 app.use(cors(corsOptions))
 
@@ -31,11 +38,11 @@ db.mongoose.connect(db.url, {
     .then(() => {
         console.log("Connected to the database ✅✅");
     })
-    .catch(()=>{
+    .catch(() => {
         console.log("Cannot connect to the database ❌❌");
         process.exit()
     })
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: true }));
-    
-    app.use('/api/users', usersRoutes);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use('/api/users', usersRoutes);
