@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./SignUp.css"
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -14,8 +15,14 @@ const SignUp = () => {
     event.preventDefault();
     axios.post('http://localhost:5050/api/users', form)
       .then((response) => {
-        console.log(response.data);
-      })
+        setForm({
+            "name": '',
+            "lastName": '',
+            "email": '',
+            "password": '',
+          });
+          alert("Usuario Creado");
+        })
       .catch((error) => {
         console.error(error);
       });
